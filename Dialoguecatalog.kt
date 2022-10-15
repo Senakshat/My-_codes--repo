@@ -28,16 +28,16 @@ fun checkname():String{
     var botsName =String.format(readLine()!!)
     if(botsName.length>=10){
         println("Man that's too long,call me something else will u")
-        checkname()
+        return checkname()
     }
     else if(botsName.length<4){
         println("too short buddy")
-        checkname()
+        return checkname()
     }
     else {
         println("Perfect,Thanks for giving me the name $botsName")
+        return botsName
     }
-    return botsName
 }
 fun Questionfn(BotsName:String):Unit{
     println("Well you can ask me anything you'd like")
@@ -61,18 +61,18 @@ fun BotsAns(BotsName:String):Unit{
                println("I don't have a specific color but i do like the color Blue its just so fascinating color")
                print("All the color which defines pascifism is defined by colour blue ")
                println("\nThat is why i like it so much")
-               println("do you have any other quetion's to ask?")
+               println("do you have any other question's to ask?")
                dialogueCatalog(BotsName)
            }
             2-> {
                 println("NO I am a humnoid Bot and you have given me the name $BotsName")
                 println("So, i technically cannot be married,But if u insist why not bring female Bot for me :)):3")
-                println("do you have any other quetion's to ask?")
+                println("do you have any other question's to ask?")
                 dialogueCatalog(BotsName)
             }
             3->{
                 println("I am $BotsName,and i am currently 3 years old.manufactured in the city colarado")
-                println("do you have any other quetion's to ask?")
+                println("do you have any other question's to ask?")
                 dialogueCatalog(BotsName)
             }
             4->{
@@ -80,22 +80,22 @@ fun BotsAns(BotsName:String):Unit{
                 println("i am a reliable bot who can kill all kind of monsters")
                 println("My new features include")
                 wepons_catalog()
-                println("do you have any other quetion's to ask?")
+                println("do you have any other question's to ask?")
                 dialogueCatalog(BotsName)
             }
             5->{
                 println("I am robot build for ultimate protection")
                 print(" Colarodo institute calls me T-345")
                 println("But you gave me best name possible so i m now $BotsName")
-                println("do you have any other quetion's to ask?")
+                println("do you have any other question's to ask?")
                 dialogueCatalog(BotsName)
-            }
-        }
+}
+}
 
-    }
-    else if(inp==0){
-        print("thanks for the questions we now proceed :3")
-    }
+}
+else if(inp==0){
+    print("thanks for the questions we now proceed :3")
+}
 }
 fun wepons_catalog():Unit{
     println("->Beserker weapon katana")
